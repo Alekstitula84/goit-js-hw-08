@@ -15,7 +15,7 @@ formObject.form.addEventListener("submit", onFormSubmit);
 
 function onFormInput(event) {
     const key = event.target.name;
-    params(key) = event.target.value;
+    params[key] = event.target.value;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(params));
 };
 
