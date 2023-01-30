@@ -29,11 +29,11 @@ function onFormSubmit(event) {
 function getStorageData() {
     const data = localStorage.getItem(STORAGE_KEY);
     const parseData = JSON.parse(data);
-    if (parseData.email) {
-        formObject.email.value = parseData.email;
-
-    } else if (parseData.message) {
-        formObject.message.value = parseData.message;
-    }
+    if (parseData) {
+        parseData.email ? formObject.email.value = parseData.email : formObject.email.value = ''
+        parseData.message ? formObject.message.value = parseData.message : formObject.message.value = ''
+    };
 };
+
 getStorageData();
+

@@ -7,7 +7,10 @@ import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
 for (let el of galleryItems) {
-    document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<a class="gallery__item" href="${el.original}"><img class="gallery__image" src="${el.preview}"  alt="${el.description}"></a>`)
+    document.querySelector('.gallery').insertAdjacentHTML('beforeEnd',
+        `<a class="gallery__item" href="${el.original}">
+            <img class="gallery__image" src="${el.preview}" 
+                   alt="${el.description}"></a>`)
 };
 
 
